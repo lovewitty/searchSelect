@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="searchSelect : jQuery plugin for searchable and scrollable select lists while keeping default button style." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>searchSelect</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/oddhill/searchSelect">View on GitHub</a>
+
+          <h1 id="project_title">searchSelect</h1>
+          <h2 id="project_tagline">jQuery plugin for searchable and scrollable select lists while keeping default button style.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/oddhill/searchSelect/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/oddhill/searchSelect/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>To make your select lists searchable and scrollable, run the plugin on any html select element.</p>
+
+<h3>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<ul>
+<li>jQuery 1.7+ (included)</li>
+<li>slimScroll 1.3+ (included)</li>
+</ul><h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<div class="highlight highlight-html"><pre>// Include css
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"jquery.searchselect.css"</span><span class="nt">&gt;</span>
+// Include scripts
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"slimscroll.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"searchselect.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h3>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h3>
+
+<div class="highlight highlight-javascript"><pre><span class="c1">// Initialize plugin to all selects</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'select'</span><span class="p">).</span><span class="nx">searchselect</span><span class="p">();</span>
+
+<span class="c1">// Initialize plugin to select with id foo</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'select#foo'</span><span class="p">).</span><span class="nx">searchselect</span><span class="p">();</span>
+
+<span class="c1">// Initialize plugin to selects with class foo with custom settings</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'select.foo'</span><span class="p">).</span><span class="nx">searchselect</span><span class="p">({</span><span class="nx">emptyMessage</span><span class="o">:</span> <span class="s1">'No options found..'</span><span class="p">})</span>
+</pre></div>
+
+<h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<ul>
+<li>
+<strong>emptyMessage:</strong> Text to display when result is empty. <strong>Default:</strong> 'No results..'</li>
+<li>
+<strong>slimScrollWidth:</strong> Width of visible scroll area. Stretch to parent if not set. <strong>Default:</strong> 'none',</li>
+<li>
+<strong>slimScrollHeight:</strong> Height of visible scroll area. Supports auto for parent size. <strong>Default:</strong> 'auto',</li>
+<li>
+<strong>slimScrollSize:</strong> Width of scrollbar. <strong>Default:</strong> '7px',</li>
+<li>
+<strong>slimScrollPosition:</strong> Sets the position of scrollbar. <strong>Default:</strong> 'right',</li>
+<li>
+<strong>slimScrollColor:</strong> Color of scrollbar. <strong>Default:</strong> '#000000',</li>
+<li>
+<strong>slimScrollAlwaysVisible:</strong> Disables scrollbar hide. <strong>Default:</strong> false,</li>
+<li>
+<strong>slimScrollDistance:</strong> Distance from parent element. Used with position property. <strong>Default:</strong> 0,</li>
+<li>
+<strong>slimScrollStart:</strong> Initial position of scrollbar: top, bottom, $(element). <strong>Default:</strong> 'top',</li>
+<li>
+<strong>slimScrollWheelStep:</strong> Integer value for mouse wheel delta. <strong>Default:</strong> 20,</li>
+<li>
+<strong>slimScrollRailVisible:</strong> Enables scrollbar rail. <strong>Default:</strong> true,</li>
+<li>
+<strong>slimScrollRailColor:</strong> Sets scrollbar rail color. <strong>Default:</strong> '#F0F0F0',</li>
+<li>
+<strong>slimScrollRailOpacity:</strong> Sets scrollbar rail opacity. <strong>Default:</strong> 1,</li>
+<li>
+<strong>slimScrollAllowPageScroll:</strong> Scroll page when bar reaches top or bottom. <strong>Default:</strong> false,</li>
+<li>
+<strong>slimScrollDisableFadeOut:</strong> Disables scrollbar auto fade. <strong>Default:</strong> false,</li>
+<li>
+<strong>slimScrollTouchScrollStep:</strong> Sensitivity for touch scroll events. <strong>Default:</strong> 200</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This plugin is released under the MIT license.
+<a href="http://opensource.org/licenses/MIT">More Information</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">searchSelect maintained by <a href="https://github.com/oddhill">oddhill</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
