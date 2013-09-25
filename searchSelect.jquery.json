@@ -1,0 +1,33 @@
+{
+  "name": "searchSelect",
+  "title": "searchSelect",
+  "description": "jQuery plugin for searchable and scrollable select lists while keeping default button style.",
+  "keywords": [
+    "jquery",
+    "searchselect",
+    "search",
+    "select",
+    "option",
+    "scroll",
+    "field",
+    "plugins"
+  ],
+  "version": "1.1.0",
+  "author": {
+    "name": "Odd Hill",
+    "url": "http://oddhill.se"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "homepage": "http://oddhill.github.io/searchSelect/",
+  "docs": "http://oddhill.github.io/searchSelect/",
+  "download": "http://oddhill.github.io/searchSelect/",
+  "dependencies": {
+    "jquery": ">=1.7",
+    "slimscroll": ">=1.3"
+  }
+}
