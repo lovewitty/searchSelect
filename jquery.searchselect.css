@@ -23,7 +23,7 @@ div.searchSelectLayer {
   background: #FFFFFF;
   filter: alpha(opacity=0);
   opacity: 0;
-  cursor: text;
+  cursor: pointer;
 }
 
 /* Dropdown */
