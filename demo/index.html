@@ -17,7 +17,7 @@
     </style>
     <script src="jquery-1.10.2.min.js"></script>
     <script src="../jquery.slimscroll.min.js"></script>
-    <script src="../jquery.searchselect.min.js"></script>
+    <script src="../jquery.searchselect.dev.js"></script>
     <script>
       var items = [
       "king",
@@ -920,11 +920,11 @@
       "limb"];
 
       $(function() {
-        $('select').append('<option value="all" selected="selected">All</option>');
-        for (var i = 0; i < items.length; i++) {
-          $('select').append('<option value="' + (i + 1) + '">' + items[i].charAt(0).toUpperCase() + items[i].substring(1) + '</option>');
-          i++;
-        };
+        // $('select').append('<option value="all" selected="selected">All</option>');
+        // for (var i = 0; i < items.length; i++) {
+        //   $('select').append('<option value="' + (i + 1) + '">' + items[i].charAt(0).toUpperCase() + items[i].substring(1) + '</option>');
+        //   i++;
+        // };
 
         $('select').searchSelect();
       });
@@ -932,6 +932,9 @@
   </head>
   <body>
     <select>
+      <option value='sh' data-extra='shanghai'>上海</option>
+      <option value='bj' data-extra='beijing'>北京</option>
+      <option value='sm' data-extra='sanming'>三明</option>
     </select>
   </body>
 </html>

@@ -75,6 +75,7 @@
       // Looping through options in select and copy into new element.
       $(this).find('option').each(function(i, obj) {
         $(p).text($(this).text());
+        $(p).attr('data-extra', $(this).attr('data-extra'));
         $(option).attr('id', 'searchSelectOptionValue-' + $(this).val());
         $(option).append(p);
         $(options).append(option.clone());
@@ -117,6 +118,9 @@
   // Creates a new jQuery contains selector that is case insensitive.
   $.expr[':'].searchSelectContains = $.expr.createPseudo(function(arg) {
     return function(elem) {
+      if($(elem).attr('data-extra').toUpperCase().indexOf(arg.toUpperCase()) >= 0){
+        return true;
+      }
       return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
     };
   });
